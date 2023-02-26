@@ -1,0 +1,63 @@
+<html>
+    <h2>This page has a form to fill out with many different elements</h2>
+    <form>
+        email<input type = "text" id = "email" name="email" maxlength="20">
+        <br>
+        username <input type="text" id="username" name="username" maxlength="30">
+        <br>
+        <p>This next user input action cannot be seen because it is the password</p>
+        password <input type="password" id="password" name="password">
+        <br>
+        Here is a selection element where you can only pick one option
+        <select id="colour">
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="yellow">yellow</option>
+        </select>
+        <br>
+        Low<input type="range" name="choice" id="choice" min="1" max="150">High
+        <br>
+        <p>Here is a checkbox of drinks you can pick that you like (you can check both)</p>
+        <br>
+        <input type="checkbox" name="checkbox1" id="checkbox1" value="Tea">
+        <label for="checkbox2Id">Tea</label>
+        <br>
+        <input type="checkbox" name="checkbox2" id="checkbox2" value="Water">
+        <label for="checkbox3Id">Water</label>
+        <br>
+        <input type="hidden" value="20"></input>
+        <br>
+        <label for="random">Choose a number from 5 to 17</label>
+        <input type="number" name="random" id="random" min="5" max="17">
+        <br>
+        <label for="mydate">Choose a date from the calander</label>
+        <input type="date" name="mydate" id="mydate">
+        <br>
+        <p>reset will fully reset everything that the user typed</p>
+        <input type="submit" name="Button" id="Button" value="submit">
+        <br>
+        <input type="reset" name="Button" id="ResetButton" value="reset"></input>
+        <br>
+
+
+
+    </form>
+    <br>
+    <p>Relative links</p>
+    <br>
+    <nav>
+        <ul>
+            <li>
+                <a href="Aboutme.html">About me</a>
+            </li>
+    
+            <li>
+                <a class="active" href="#">Forms</a>
+            </li>
+            <li>
+                <a href="./paragraph.html">Paragraph</a>
+            </li>
+        </ul>
+    </nav>
+
+</html>
