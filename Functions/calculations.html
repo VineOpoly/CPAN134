@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Calculation</title>
+</head>
+<body>
+	<h1>Calculation</h1>
+	<form>
+		<label for="roomRental">Room rental:</label>
+		<input type="number" id="roomRental" name="roomRental" onclick="calculateCost()"><br><br>
+		<label for="food">Food:</label>
+		<input type="number" id="food" name="food" onclick="calculateCost()"><br><br>
+		<label for="entertainment">Entertainment:</label>
+		<input type="number" id="entertainment" name="entertainment" onclick="calculateCost()"><br><br>
+		<label for="subtotal">Total:</label>
+		<input type="text" id="subtotal" name="subtotal" readonly><br><br>
+		<label for="total">With tax:</label>
+		<input type="text" id="total" name="total" readonly><br><br>
+	</form>
+	<script>
+		function calculateCost() {
+			var roomRental = parseFloat(document.getElementById("roomRental").value);
+			var food = parseFloat(document.getElementById("food").value);
+			var entertainment = parseFloat(document.getElementById("entertainment").value);
+
+			var subtotal = roomRental + food + entertainment;
+			var total = subtotal * 1.13;
+
+			document.getElementById("subtotal").value = subtotal.toFixed(2);
+			document.getElementById("total").value = total.toFixed(2);
+		}
+	</script>
+</body>
+</html>

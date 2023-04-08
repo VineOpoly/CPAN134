@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="js/lalala.js"></script>
+    </head>
+    <body>
+        <h1>Function Demo</h1>
+        <p id = "Result"> Result goes here</p>
+        <input type="text" id="num1">
+        <input type="text" id="num2">
+        <button onclick="multiplication(document.getElementById('num1').value,
+        document.getElementById('num2').value)">Show result</button>
+        <script>
+            function multiplication(a,b) {
+                document.getElementById("Result").innerHTML = (a*b);
+            }
+        </script>
+    </body>
+</html>

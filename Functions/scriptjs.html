@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Javascript objects</h1>
+        <p id="Info"></p>
+        <script>
+            var person = {"firstname":"Mike", "lastname":"Robert","age":40 };
+            document.getElementById("Info").innerHTML = person.firstname + " " + person.lastname + " "
+            + person.age;
+
+            function car(mk, mdl, yr) {
+                this.make = mk;
+                this.model = mdl;
+                this.year = yr;
+                this.printInfo = function() {
+                    return "car details: Make: " + this.make + ", Model: " + this.model + ", Year: " + this.year;
+                }                
+            }
+            var car1 = new car("Toyota", "Camry", 2016);
+            var car2 = new car("Honda", "Accord", 2022);
+            var car3 = new car("Nissan", "Altima", 2023);
+            document.write(car1.printInfo() + "<br>");
+            document.write(car2.printInfo() + "<br>");
+            document.write(car3.printInfo() + "<br>");
+        </script>
+    </body>
+</html>

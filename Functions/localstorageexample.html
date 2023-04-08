@@ -1,0 +1,42 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1>Local storage demo</h1>
+        <form action="infolocal.html">
+            First name: <input type="text" id="fn" name="fn"><br><br>
+            Last name: <input type="text" id="ln" name="ln"><br><br>
+            Password: <input type="text" id="pw" name="pw"><br><br>
+            <button onclick="saveInfo()">Save Info</button>
+            <button onclick="RetrieveInfo()">Retrieve Info</button>
+            <button onclick="RemoveInfo()">Remove Info</button>
+   
+        </form>
+        <script>
+            function saveInfo() {
+                let firstName = document.getElementById("fn").value;
+                let lastName = document.getElementById("ln").value;
+                let fullName = firstName + " " + lastName
+                localStorage.setItem("f1", firstName);
+                localStorage.setItem("l1", lastName);
+                localStorage.setItem("fullname", fullName);
+
+            }
+            function RetrieveInfo() {
+                document.getElementById("fn").value = localStorage.getItem("f1");
+                document.getElementById("ln").value = localStorage.getItem("l1");
+                document.getElementById("fullName").value = localStorage.getItem("fullName");
+
+
+
+            }
+            function RemoveInfo() {
+                localStorage.removeItem("f1");
+                localStorage.removeItem("l1");
+                localStorage.removeItem("fullName");
+
+            }
+        </script>
+    </body>
+</html>
