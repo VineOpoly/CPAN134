@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment 2</title>
+    <script>
+      function hideCapital() {
+        document.getElementById("capital").style.display = "none";
+        document.getElementById("hide").style.display = "none";
+        document.getElementById("show").style.display = "block";
+      }
+      function showCapital() {
+        document.getElementById("capital").style.display = "block";
+        document.getElementById("hide").style.display = "block";
+        document.getElementById("show").style.display = "none";
+      }
+      function toggleCapital() {
+        var capitalElement = document.getElementById("capital");
+        if (capitalElement.style.display === "none") {
+          capitalElement.style.display = "block";
+          document.getElementById("hide").style.display = "block";
+          document.getElementById("show").style.display = "none";
+        } else {
+          capitalElement.style.display = "none";
+          document.getElementById("hide").style.display = "none";
+          document.getElementById("show").style.display = "block";
+        }
+      }
+      function toggleGreenBackground() {
+        var greenElement = document.getElementById("hover-green");
+        if (greenElement.style.backgroundColor === "white") {
+          greenElement.style.backgroundColor = "green";
+        } else {
+          greenElement.style.backgroundColor = "white";
+        }
+      }
+    </script>
+    <style>
+      .hover-white {
+        background-color: white;
+      }
+      .hover-white:hover {
+        background-color: yellow;
+      }
+      .hover-white-green {
+        background-color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p><b>Country:</b></p>
+    <p>Canada</p>
+    <p><b>Capital:</b></p>
+    <p id="capital">Ottawa</p>
+    <button id="hide" onclick="hideCapital()">Hide capital name</button>
+    <button id="show" style="display:none" onclick="showCapital()">Show capital name</button>
+    <br><br>
+    <button onclick="toggleCapital()">Toggle</button>
+    <br><br>
+    <p class="hover-white" id="hover-yellow">Hover on this paragraph for background color yellow</p>
+    <p class="hover-white-green" id="hover-green" onclick="toggleGreenBackground()">Click on this paragraph for background color green</p>
+  </body>
+</html>
