@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JJ Cofee House</title>
+    <script src="email_list.js"></script>
 </head>
 <body style="background-color: rgb(241, 228, 189);">
     <div id="wrapper">
@@ -26,28 +27,51 @@
         <nav>
             <ul>
                 <li>
-                    <a class="active" href="#">Home</a>
+                    <a href="./home.html">Home</a>
                 </li>
                 <li>
                     <a href="./menu.html">Menu</a>
                 </li>
                 <li>
-                    <a href="./music.html">Music</a>
+                    <a href="./jobs.html">Music</a>
                 </li>
                 <li>
-                    <a href="./jobs.html">Jobs</a>
+                    <a class="active" href="#">Jobs</a>
                 </li>
             </ul>
         </nav>
 
         <main id="home" style="padding: 0% 20%">
             <h2>Relax at JJ</h2>
-            <ul>
-                <li>Specialty Coffee and Tea</li>
-                <li>Bagels, Muffins, and Organic Snacks</li>
-                <li>Music and Poetry Readings</li>
-                <li>Open Mic Night</li>
-            </ul>
+            <p>Information on jobs at JJ coffee house</p>
+        <ul>
+            <li>Rock music on April 19th</li>
+            <li>Classical music on April 20th</li>
+            <li>Rap music on April 21st</li>
+        </ul>
+        <body>
+            <h1>Please subscribe with your email for updates on Jobs</h1>
+            <form id="email_form" name="email_form"action="join.html" method="get">
+                <label for="email_address1">Email Address:</label>
+                <input type="text" id="email_address1"name="email_address1">
+                <span id="email_address1_error">*</span>
+                <br>
+                <label for="email_address2">Re-enter Email Address:</label>
+                <input type="text" id="email_address2"name="email_address2">
+                <span id="email_address2_error">*</span>
+                <br>
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name"name="first_name">
+                <span id="first_name_error">*</span><br><label>&nbsp;</label>
+                <input type="button" id="join_list"value="Join our List">
+            </form>
+
+
+            
+        </body>
+
+        
+
 
             <footer>
                 <div id="footer">
@@ -69,5 +93,6 @@
         </main>
     </div>
     
+    </script>
 </body>
 </html>

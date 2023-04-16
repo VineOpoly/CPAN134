@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Calculator</title>
+</head>
+<body style="background-color: rgb(241, 228, 189);">
+    <div id="wrapper">
+        <header style="padding: 0% 20%">
+            <h1 clase="header" style="font-size: 3rem; text-align: center; background-color: rgb(238, 199, 131);">
+            JJ Coffee House
+            </h1>
+        </header>
+
+        <style>
+            nav ul {padding: 0;
+            margin: 0;
+            text-align: center;}
+            div nav ul li {
+                display: inline-block;
+                margin: 1rem;}
+            d1 dt{font-size: 1.5rem;
+            font-weight: bold;}
+        </style>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="./home.html">Home</a>
+                </li>
+                <li>
+                    <a class="active" href="#">Menu</a>
+                </li>
+                <li>
+                    <a href="./music.html">Music</a>
+                </li>
+                <li>
+                    <a href="./jobs.html">Jobs</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main id="menu" style="padding: 0% 20%">
+            <h1>Coffee at JJ</h1>
+            <d1>
+                <dt>Just Java</dt>
+                <dd>Regular blend, decaffeinated coffee, or coffee of the day.</dd>
+                <dd>Endless Cup $2.00</dd>
+                <dt>Cafe Latte</dt>
+                <dd>House blended coffee infused into steamed milk.</dd>
+                <dd>single $1.00</dd>
+                <dt>Iced Cappuccino</dt>
+                <dd>Sweetened espresso blended with ice-cold milk and served in a chilled glass.</dd>
+                <dd>Single $4.75</dd>
+            </d1>
+
+            <h1>Menu Calculator</h1>
+
+            <div id="menu">
+                <h2>Menu</h2>
+                <ul>
+                    <li>Just Java - $2.00 <input type="number" id="just-java" value="0"></li>
+                    <li>Cafe Latte - $1.00 <input type="number" id="cafe-latte" value="0"></li>
+                    <li>Iced Cappuccino - $4.75 <input type="number" id="iced-cappuccino" value="0"></li>
+                </ul>
+            </div>
+
+            <div id="total">
+                <h2>Total</h2>
+                <p id="total-price">$0.00</p>
+                <button onclick="calculateTotal()">Calculate Total</button>
+            </div>
+
+            <script>
+                function calculateTotal() {
+                    const justJavaInput = document.getElementById("just-java").value;
+                    const cafeLatteInput = document.getElementById("cafe-latte").value;
+      const icedCappuccinoInput = document.getElementById("iced-cappuccino").value;
+
+      const justJavaPrice = 2.00 * justJavaInput;
+      const cafeLattePrice = 1.00 * cafeLatteInput;
+      const icedCappuccinoPrice = 4.75 * icedCappuccinoInput;
+      const totalPrice = justJavaPrice + cafeLattePrice + icedCappuccinoPrice;
+
+      const totalPriceElement = document.getElementById("total-price");
+      totalPriceElement.innerHTML = "$" + totalPrice.toFixed(2);
+    }
+  </script>
+</body>
+              <footer>
+                <div id="footer">
+                    <p id="Copyright"
+                    style="text-align: center; background-color: rgb(238, 199, 131)">
+                    Copyright &copy; 2016 JJ Coffee House
+                    <br>
+                    <a href="Andrew@Ramlall.com">Andrew@Ramlall.com</a>
+                    </p>
+                </div>
+            </footer>
+    
+</body>
+</html>

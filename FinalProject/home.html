@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JJ Cofee House</title>
 </head>
 <body style="background-color: rgb(241, 228, 189);">
     <div id="wrapper">
@@ -21,17 +22,15 @@
             div nav ul li {
                 display: inline-block;
                 margin: 1rem;}
-            d1 dt{font-size 1.5rem;
-            font-weight: bold;}
         </style>
 
         <nav>
             <ul>
                 <li>
-                    <a href="./home.html">Home</a>
+                    <a class="active" href="#">Home</a>
                 </li>
                 <li>
-                    <a class="active" href="#">Menu</a>
+                    <a href="./menu.html">Menu</a>
                 </li>
                 <li>
                     <a href="./music.html">Music</a>
@@ -42,22 +41,32 @@
             </ul>
         </nav>
 
-        <main id="menu" style="padding: 0% 20%">
-            <h1>Coffee at JJ</h1>
-            <d1>
-                <dt>Just Java</dt>
-                <dd>Regular blend, decaffeinated coffee, or coffee of the day.</dd>
-                <dd>Endless Cup $2.00</dd>
-                <dt>Cafe Latte</dt>
-                <dd>House blended coffee infused into steamed milk.</dd>
-                <dd>single $1.00 and Double $2.00</dd>
-                <dt>Iced Cappuccino</dt>
-                <dd>Sweetened espresso blended with ice-cold milk and served in a chilled glass.</dd>
-                <dd>Single $4.75 Double $5.75</dd>
-            </d1>
+        <main id="home" style="padding: 0% 20%">
+            <h2>Relax at JJ</h2>
+            <ul>
+                <li>Specialty Coffee and Tea</li>
+                <li>Bagels, Muffins, and Organic Snacks</li>
+                <li>Music and Poetry Readings</li>
+                <li>Open Mic Night</li>
+            </ul>
+            <section>
+                <h3>Enter email for JJ coffee house updates!</h3>
+                <form id="email-form">
+                  <label for="email-input">Email:</label>
+                  <input type="email" id="email-input" name="email">
+                  <button type="submit" id="submit-btn">Submit</button>
+                </form>
+              </section>
 
             <footer>
                 <div id="footer">
+                    <p>
+                        12345 Route 12
+                        <br>
+                        Ellison Bay, WI 12345
+                        <br>
+                        888-555-1234
+                    </p>
                     <p id="Copyright"
                     style="text-align: center; background-color: rgb(238, 199, 131)">
                     Copyright &copy; 2016 JJ Coffee House
@@ -66,6 +75,8 @@
                     </p>
                 </div>
             </footer>
+        </main>
+    </div>
     
 </body>
 </html>
